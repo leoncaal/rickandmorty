@@ -1,0 +1,20 @@
+.divCards{
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.divCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: ghostwhite;
+    border-style: outset;
+    padding: 4px;
+    margin: 5px;
+    border-radius: 3%;
+    width: 200px;
+    height: 280px;
+}

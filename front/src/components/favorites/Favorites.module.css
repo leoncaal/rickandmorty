@@ -1,0 +1,89 @@
+.divCards{
+    display:grid;
+    grid-template-columns: auto auto auto auto auto auto;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.divCard{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    background-color: ghostwhite;
+    border-style: outset;
+    padding: 4px;
+    margin: 5px;
+    border-radius: 3%;
+    width: 200px;
+    height: 280px;
+}
+.divCard img{
+    border-radius: 5%;
+    width: 200px;
+    height: 200px;
+    margin-top: 8%
+}
+.divCard img:hover{
+    opacity: 0.6;
+}
+.buttonFav{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color:lavender;
+    border-color: #663399;
+    border-style: dotted;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 0%;
+    margin-bottom: 10%;
+}
+.buttonFav:hover{
+    background-color: rebeccapurple;
+    color: ghostwhite;
+}
+.buttonX{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-color:lavender;
+    border-color: #663399;
+    border-style: dotted;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin-left: 70%;
+    margin-bottom: 10%;
+}
+.buttonX:hover{
+    background-color: rebeccapurple;
+    color: ghostwhite;
+}
+.nameText{
+    text-align: left;
+    font-size: 18px;
+    background-color:lavender;
+    border-radius: 6%;
+    border-style: outset;
+    position: absolute;
+    bottom: 12%;
+    right: 9px;
+}
+.descripText{
+    display:flex;
+    flex-direction: row;
+    width: 200px;
+    height: 20px;
+}
+.generS{
+    font-size: 20px;
+    width: 200px;
+    height: 100px;
+}
+.speciesS{
+    font-size: 20px;
+    width: 200px;
+    height: 100px;
+}

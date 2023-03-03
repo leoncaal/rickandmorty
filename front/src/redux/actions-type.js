@@ -1,0 +1,11 @@
+export const GET_ALL_CHARACTERS = 'GET_ALL_CHARACTERS';
+export const GET_CHARACTER = 'GET_CHARACTER';
+export const GET_CHARACTER_DETAIL = 'GET_CHARACTER_DETAIL';
+export const CLEAN_CHARACTER_DETAIL = 'CLEAN_CHARACTER_DETAIL';
+export const SEARCH_CHARACTER = 'SEARCH_CHARACTER';
+export const DELETE_CHARACTER = 'DELETE_CHARACTER';
+export const ADD_FAV = 'ADD_FAV';
+export const DEL_FAV = 'DEL_FAV';
+export const FILTER = 'FILTER';
+export const ORDER = 'ORDER';
+export const RESET = 'RESET';

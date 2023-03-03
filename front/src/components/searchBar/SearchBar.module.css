@@ -1,0 +1,7 @@
+.btnAgregar{
+    display: flex;
+    flex-direction: row;
+    justify-content: right;
+    align-items: right;
+    padding: 20px;
+}
