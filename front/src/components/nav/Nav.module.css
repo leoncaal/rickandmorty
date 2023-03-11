@@ -1,0 +1,33 @@
+.divNav {
+    display:flex;
+    flex-direction:row;
+    justify-content: center;
+    align-items: center;
+
+}
+.divButton {
+    display:flex;
+    flex-direction: row;
+    align-items: left;
+    padding-left: 20px;
+    width: 100%;
+}
+.divSearch{
+    display: flex;
+    flex-direction:row;
+    justify-content: right;
+}
+.button {
+    background-color: white; 
+    color: black; 
+    border: 2px solid blueviolet;
+    border-radius: 18px;
+    font-size: 18px;
+    padding: 8px 15px;
+    margin-right: 10px;
+}
+
+.button:hover {
+    background-color: blueviolet;
+    color: white;
+}

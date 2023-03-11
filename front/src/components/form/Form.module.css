@@ -1,12 +1,23 @@
+.divAux{
+  display:flex;;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  padding-bottom: 100px;
+}
 .divForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: blueviolet;
   border-radius: 1rem;
-  margin-top: 80px;
   margin-left: 330px;
   margin-right: 330px;
   padding: 100px;
   padding-top: 110px;
   padding-bottom: 110px;
+
 }
 .divDiv {
   padding-top: 60px;

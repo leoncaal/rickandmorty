@@ -17,9 +17,9 @@ const SearchBar = () => {
     }
 
     return(
-        <div className={styles.btnAgregar}>
-            <input type="search" value={character} onChange={handleChange} placeholder="ID Character"/> 
-            <button onClick= {handleClick}>Agregar</button>
+        <div className={styles.divAgregar}>
+            <input className={styles.inpAgregar} type="search" value={character} onChange={handleChange} placeholder="ID Character"/> 
+            <button className={styles.btnAgregar} onClick= {handleClick}>Agregar</button>
         </div>
     )
 }

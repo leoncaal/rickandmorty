@@ -1,4 +1,4 @@
-import "./App.css";
+import styles from "./App.module.css";
 import { Routes, Route, useLocation} from "react-router-dom";
 import Characters from "./components/characters/Characters";
 import CharacterDetail from "./components/characterDetail/CharacterDetail";
@@ -12,10 +12,13 @@ function App() {
   const location = useLocation();
 
   return (
-    <div align ="center">
-      <div className="divNav">
+    <div className={styles.divBack}> 
+      <div className={styles.divBlur}>
+        <div className={styles.divNav}>
+         
       {location.pathname !== "/" && <Nav/>}
       </div>
+
       <Routes>
         <Route path='/' element={<Form />} />
         <Route path='/home' element={<Characters/>} />
@@ -23,7 +26,9 @@ function App() {
         <Route path='/favorites' element={<Favorites />} />
         <Route path='/about' element={<About/>} />
       </Routes>
-    </div>
+</div>
+    </div>      
+
   );
 }
 

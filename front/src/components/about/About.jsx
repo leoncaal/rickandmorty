@@ -1,6 +1,8 @@
+import styles from './About.module.css';
+
 const About = () => {
     return (
-        <div>
+        <div className={styles.divInfoCard}>
             <h1>Leonel Castañeda Alvarez</h1>
         </div>
     )

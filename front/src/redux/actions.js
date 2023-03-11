@@ -8,7 +8,7 @@ import {
   DEL_FAV,
   FILTER,
   ORDER,
-  RESET
+  RESET,
 } from "./actions-type";
 import axios from "axios";
 
@@ -23,28 +23,30 @@ export const getAllCharacters = () => {
 };
 
 export const getCharacterDetail = (id) => {
-  return function (dispatch) {
-    axios(`https://rickandmortyapi.com/api/character/${id}`)
-      .then((response) => response.data)
-      .then((data) => {
-        return dispatch({ type: GET_CHARACTER_DETAIL, payload: data });
-      });
+  return async function (dispatch) {
+    const response = await axios(
+      `http://localhost:3001/rickandmorty/detail/${id}`
+    );
+    return dispatch({ type: GET_CHARACTER_DETAIL, payload: response.data });
   };
 };
 
 export const getCharacter = (character) => {
+  return async function (dispatch) {
 
-  return function (dispatch) {
-    //axios(`https://rickandmortyapi.com/api/character/${character}`)
-    axios(`http://localhost:3001/rickandmorty/character/${character}`)
-      .then((response) => response.data)
-      .then((data) => {
-        if (data.name) {
-            return dispatch({ type: GET_CHARACTER, payload: data })
-        } else {
-          window.alert("No hay personajes con ese ID");
-        }
-      });
+    try {
+       const response = await axios(
+      `http://localhost:3001/rickandmorty/onsearch/${character}`
+    );
+    
+      return dispatch({ type: GET_CHARACTER, payload: response.data });
+
+      
+    } catch (error) {
+      window.alert(error.response.data);
+    }
+
+   
   };
 };
 
@@ -53,11 +55,22 @@ export const deleteCharacter = (id) => {
 };
 
 export const addFavorites = (character) => {
-  return { type: ADD_FAV, payload: character };
+  return async function (dispatch) {
+    const response = await axios.post(
+      "http://localhost:3001/rickandmorty/fav",
+      character
+    );
+    return dispatch({ type: ADD_FAV, payload: response.data });
+  };
 };
 
 export const delFavorites = (id) => {
-  return { type: DEL_FAV, payload: id };
+  return async function (dispatch) {
+    const response = await axios.delete(
+      `http://localhost:3001/rickandmorty/fav/${id}`
+    );
+    return dispatch({ type: DEL_FAV, payload: response.data });
+  };
 };
 
 export const filterCards = (status) => {
@@ -69,8 +82,8 @@ export const orderCards = (id) => {
 };
 
 export const reset = () => {
-  return {type: RESET}
-}
+  return { type: RESET };
+};
 
 export const cleanCharacterDetail = () => {
   return { type: CLEAN_CHARACTER_DETAIL };

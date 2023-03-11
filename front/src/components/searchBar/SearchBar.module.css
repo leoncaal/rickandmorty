@@ -1,7 +1,25 @@
-.btnAgregar{
+.divAgregar{
     display: flex;
     flex-direction: row;
     justify-content: right;
     align-items: right;
     padding: 20px;
+    
+}
+.inpAgregar{
+    border: 2px solid blueviolet;
+    border-radius: 18px;
+    margin-right: 10px;
+}
+.btnAgregar {
+    background-color: white; 
+    color: black; 
+    border: 2px solid blueviolet;
+    border-radius: 18px;
+    font-size: 18px;
+    padding: 8px 15px;
+}
+.btnAgregar:hover {
+    background-color: blueviolet;
+    color: white;
 }

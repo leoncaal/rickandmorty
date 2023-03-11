@@ -64,7 +64,10 @@ function Form() {
   }, [access]);
 
   return (
+    <div className={styles.divAux}>
+      <h1></h1>
     <div className={styles.divForm}>
+       
       <form onSubmit={handleSubmit}>
         <label>Username: </label>
         <input
@@ -85,7 +88,8 @@ function Form() {
         {errors.password && <p className={styles.danger}>{errors.password}</p>}
         <div className={styles.divDiv}></div>
         <button type="submit">LOGIN</button>
-      </form>
+      </form> 
+      </div>
     </div>
   );
 }

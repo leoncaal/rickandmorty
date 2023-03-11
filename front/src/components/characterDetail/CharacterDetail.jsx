@@ -1,3 +1,4 @@
+import styles from './CharacterDetail.module.css';
 import { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { useSelector, useDispatch } from "react-redux";
@@ -14,13 +15,19 @@ const CharacterDetail = () => {
   }, []);
 
   return (
-    <div>
-      <img src={characterDetail.image} alt={characterDetail.name} />
-      <h1>{characterDetail.name}</h1>
-      <h3>{characterDetail.gender}</h3>
-      <h3>{characterDetail.species}</h3>
-      <h3>{characterDetail.status}</h3>
-      <h3>{characterDetail.origin?.name}</h3>
+    <div className={styles.divDetail}>
+      <div>
+        <img src={characterDetail.image} alt={characterDetail.name} />
+      </div>
+      
+      <div className={styles.divProps}>
+        <h1>{`Nombre: ${characterDetail.name}`}</h1>
+        <h3>{`Genero: ${characterDetail.gender}`}</h3>
+        <h3>{`Especie: ${characterDetail.species}`}</h3>
+        <h3>{`Estatus: ${characterDetail.status}`}</h3>
+        <h3>{`Origen ${characterDetail.origin?.name}`}</h3>
+      </div>
+      
     </div>
   );
 };
